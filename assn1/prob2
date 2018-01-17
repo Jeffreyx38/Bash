@@ -1,0 +1,21 @@
+#!/bin/bash
+
+#traverse directory
+for dir in $(find $ARCHIVE/* -type d);
+do
+
+	ls $dir >> tmp 
+		
+done
+
+#pass filenames to temp, sort, remove last suffix, sort again
+sort < tmp | awk -F"_" '{a[$1]++;}END{for (i in a)print a[i], i;}' | sort | cat > sorted
+
+#find sorted and keep track of max number and return 
+for file in *; do
+	if [[ -f "$file" && $file == "sorted" ]]; then
+		x=`awk -v max=0 '{if($1>max){max=$1}}END{print max} ' $file`
+		awk -F" " '$1 == '$x' {print $1, $2}' $file	
+	fi
+done
+

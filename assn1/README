@@ -1,0 +1,32 @@
+ARCHIVE SET-UP!
+
+1. set ARCHIEVE= path name where the data is stored
+2. export ARCHIEVE
+
+Prob1:
+
+Foor loop through directory and files. Return  # of directories and # of messaged by count. 
+
+how to test: make sure ARCHIVE path name is set correctly. run script.
+
+Prob2:
+
+For loop through directories and ls to a tmp file. Sort tmp file, remove the suffix, keep track of repeated files and sort again. Finally, find sorted file and keep track max number and return values - longest thread
+
+test: 1. Make sure ARCHIVE path name is set correctly. 2. Run script. 3. If you want to run the scrip again, MAKE SURE TO REMOVE THE TMP file first and then execute the script again. 
+
+prob3:
+
+For loop through directories and files and print based on grep condition. 
+
+test: 1. Make sure ARCHIVE path name is set correctly. 2. Insert date condition 3. run script. 
+
+
+prob4:
+
+For loop through directories and files. Awk hostname by '@', cutting twice, any upper caps to lower case, and save to tmp file. Sort tmp and save to sorted file. Find sorted file, keep track of repeated hostname for send messaged, and finally return hostname and number of messaged sent. Print total unique names. 
+
+test: 1. Make sure ARCHIVE path name is set correctly. 2. Run script. 3. If you
+want to run the scrip again, MAKE SURE TO REMOVE THE TMP file first and then exe
+cute the script again.
+

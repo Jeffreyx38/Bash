@@ -1,0 +1,28 @@
+#!/bin/bash
+
+#arguments
+year=$1
+month=$2
+day=$3
+
+#if no args provided
+if [ $# -eq 0 ]
+  then
+    echo "No arguments supplied"
+    exit 1
+fi
+
+#traverse first levle of directory
+for dir in $(find $ARCHIVE/* -type d);
+do
+	#traverse all files
+	for file in $(find "$dir/" -type f);
+	do
+		#print filename based on arguments
+		filename=$(grep -l "$month/$day/$year" $file)
+		[ -n "$filename" ] && echo ${filename##*/}	
+	done
+
+done
+
+

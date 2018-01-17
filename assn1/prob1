@@ -1,0 +1,24 @@
+#!/bin/bash
+
+
+dirCount=0
+fileCount=0
+
+#traverse directories 
+for dir in $(find $ARCHIVE/* -type d);
+do
+	#number of directories
+	((dirCount++))
+	
+	#traverse number of files
+	for files in $(find $dir -type f -name '.*' -prune -o -print);
+	do
+		if [ -f "$files" ]; then
+			((fileCount++))
+		fi
+	done
+done
+
+
+echo -n $dirCount ""
+echo $fileCount

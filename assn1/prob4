@@ -1,0 +1,25 @@
+#!/bin/bash
+
+#traverse all directories
+for dir in $(find $ARCHIVE/* -type d);
+do
+	#traverse all files and return hostame, input to tmp
+	for file in $(find "$dir/" -type f);
+	do
+		awk -F" " '/@/{a=$2;print a;exit}' $file | awk '{print tolower($0)}' | cut -f2 -d "@" | cut -f1 -d "." >> tmp
+	done
+done
+
+#sort tmp and save to sorted file
+sort < tmp > sorted
+
+#find sorted file and count repeated hostnames and return value and hostname
+#return total unique hostname
+for i in *; do
+        if [[ -f "$i" && $i == "sorted" ]]; then
+		awk -F"_" '{a[$1]++;}END{for (i in a)print i, a[i];}' $i | sort -k2 -nr
+		total=$(awk -F"_" '{a[$1]++;}END{for (i in a)print i, a[i];}' $i | awk 'END{print NR}')
+        fi
+done
+
+echo "total" $total
