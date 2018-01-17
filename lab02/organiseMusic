@@ -1,0 +1,15 @@
+#!/bin/bash 
+
+for i in *.mp3; do
+	name=$i
+	index=`expr index "$name" -`
+	artistName=${name:0:($index-2)}
+	
+       	mkdir $artistName 
+	mv "$name" "$artistName/${name#*-\ }"
+	      
+	  
+
+
+	
+done

@@ -1,0 +1,116 @@
+Q1:
+.bashrc - the shell invokes .bashrc when it is a interactive non-login shell such as scp and rcp that don't tolerate any output
+
+.bash_profile - the shell invokes .bash_profile when it is a login shell
+	
+Q2:
+
+vi_lab is committed.
+
+Q3:
+List of information about files using a long listing format.
+We have information about two files: funny and hello.bash.
+Each file contains fields about file type, permission field, 
+number of links/directories inside directory, user that owns
+the file or directory, group that file belongs to, size in bytes,
+last date modification, and name of the file. 
+
+Q4:
+
+User - Read + Write 
+Group - Read 
+World - Read 
+
+Q5:
+
+User - Read + Write + Execute 
+Group -  Read + Execute
+World - Read + Execute 
+
+Q6:
+
+Yes I have permission to read.
+
+Q7:
+Yes I have permission to read.
+
+Q8:
+
+No because the file has no permission to be execute. 
+
+Q9:
+1. chmod u+x 
+2. chmod 700
+
+Q10:
+
+No permission to write. "Readonly" option is set. 
+
+Q11:
+
+ls *
+	1. annoy
+	2. annoy.cc
+	3. itemList
+	4. itemList-2cols
+	5. TelecomTruths
+	6. UnitTestingPhase 
+ls a* 
+	1. annoy
+	2. annoy.cc
+ls *m* 
+	1. itemList
+	2. itemList-2cols
+	3. TelecomTruths
+ls anno? 
+	1. annoy
+ls annoy?
+	1. no such file or directory
+
+Q12:
+
+Two files were opened. File a and file space. 
+
+Q13:
+echo Is a < b?
+	ans: No such file or directory 
+echo "Is a < b?"
+	ans: Is a < b?
+echo "\$USER is $USER"
+	ans: $USER is jz553
+echo '\$USER is $USER'
+	ans: \$USER is $USER
+echo "Today is `date`"
+	ans: Today is Fri Sep 29 17:57:24 EDT 2017
+echo "Today is $(date)"
+	ans: Today is Fri Sep 29 17:58:06 EDT 2017
+echo 'Today is `date`'
+	ans: Today is `date`
+echo -e "Files that start w/e:\n`ls e*`"
+	ans: ls: cannot access 'e*': No such file or directory
+		 Files that start w/e:
+
+Q14: 
+
+The first command outputs an unordered list while the second command outputs a numerically ordered list.
+
+Q15:
+
+sort -nr itemList-2cols | heads -8  
+
+16.
+
+The tar file is gone. Lab1.tar.gz replaced it. 
+
+Q17.
+
+Lab1.tgz is gone. It is no longer compressed. The achieve file exists now. 
+
+
+Q18.
+
+grep Vacations * 
+
+Q19.
+
+find . -name "lab1"

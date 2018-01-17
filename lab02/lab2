@@ -1,0 +1,53 @@
+
+Q1.
+
+The output was file data that was modified 48 hours ago. 
+The command find parsed through all files in the current directory that
+was modified 48 hours ago and then printed the results. 
+
+Q2. 
+
+file . -type f -name "*.bash" -print 
+
+Q3.
+
+./gotMe.bash
+
+Q4.
+
+#characters: 97  
+#Words: 499 
+#lines: 2960 
+#File: breadIsDangerous.txt
+
+Q5.
+
+grep -w 'the' breadIsDangerous.txt | wc -l
+
+Q6.
+
+After executing the ispell -b spellExample command and following the prompts, 
+a new spellExample.bak was created containing the original file. 
+
+Q7.
+
+The diff command displayed the differences between spellExample 
+and spellExample.bak. The arrows refer to the values of the left file vs right file. The numeration refers to the lines being modified. For example,
+1c1, spellExample line one was modified from spellExample.bak
+
+Q8. 
+
+Nothing. No output because the files are identical. 
+
+Q9.
+
+grep dough breadIsDangerous.txt returned a value of 0. This
+means that the command has executed successfully. 
+
+grep uniqueString breadIsDangerous.txt returned a value of 1. This means that 
+the command executed but there are some general errors or miscellaneous errors. 
+
+grep dough noSuchFile returned a value of 2. This means that there was a misuse of shell builtins. NoSuchFile doesn't exist. 
+
+
+

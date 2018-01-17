@@ -1,0 +1,35 @@
+#!/bin/bash
+ 
+if [ -z "$1" ]
+then 
+	return 1
+fi
+
+ext=c
+
+for i in *.$ext; do
+	if [ -f "$i" ]; then
+		gcc -osign $i
+	fi
+
+done 
+
+for z  in *; do
+	if [ $z == "squash" ];then
+		squash=$z
+	elif [ $z  == "sign" ]; then
+		sign=$z
+	fi
+	
+done 
+
+file=$1
+
+./$sign < $file | sort | ./$squash > out 
+
+awk '{ print NF " " $0}' < out | sort -n | tail 
+
+
+
+
+ 

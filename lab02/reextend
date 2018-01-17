@@ -1,0 +1,18 @@
+#!/bin/bash
+
+
+if [ -z "$1" ] || [ -z "$2" ]
+then
+	return 1
+fi
+
+
+ext=$1
+replace_ext=$2
+
+
+for file in *.$ext
+do
+	mv -- "$file" "${file/%.$ext/.$replace_ext}"
+done
+

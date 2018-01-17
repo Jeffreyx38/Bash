@@ -1,0 +1,6 @@
+The anagram script takes one argument -the inputfile "words" 
+
+./anagram [filename]
+
+
+I added the regular expressions and git questions on this repository as well for safety measurements.  

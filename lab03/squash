@@ -1,0 +1,12 @@
+#!/bin/bash
+#!/usr/bin/awk -f
+ext=awk
+
+for i in *; do
+	if [ $i != "${i%.${ext}}" ];then
+		awk -f $i
+
+	fi
+done
+
+
