@@ -1,3 +1,5 @@
+The problem is to find all anagrams in a file containing words. The UNIX tools that will be used are: (1) a small C program that uses library calls to do string operations and sorting, (2) the UNIX sort command, (3) a small AWK program (maybe 2), and finally the UNIX head or tail command.
+
 The anagram script takes one argument -the inputfile "words" 
 
 ./anagram [filename]
